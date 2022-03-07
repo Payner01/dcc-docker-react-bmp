@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+
+  docker-react:
+  container_name: docker-react-bmp
+  build:
+      context: ./
+      dockerfile: Dockerfile
+  volumes:
+    - .:/app
+    - '/app/node_modules'
+  ports:
+    - "8001:8000"
